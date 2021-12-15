@@ -100,4 +100,21 @@ def main(
     save_dataframe_to_parquet(
         ddf=invalid_ddf, output_filepath=Path(invalid_parquet_output_path)
     )
-    
+
+
+if __name__ == "__main__":
+    # Parser setup
+    parser = argparse.ArgumentParser(
+        description="CSV to Parquet converter, partitioning the outputs into a file containing products with image and the other one products without image"
+    )
+    parser.add_argument("csv_input_path", help="Product catalog CSV file path.")
+    parser.add_argument("valid_parquet_output_path", help="The corresponding valid Parquet file path")
+    parser.add_argument("invalid_parquet_output_path", help="The corresponding invalid Parquet file path")
+    args = parser.parse_args()
+
+    # Call main function
+    main(
+        csv_input_path=args.csv_input_path,
+        valid_parquet_output_path=args.valid_parquet_output_path,
+        invalid_parquet_output_path=args.invalid_parquet_output_path,
+    )
