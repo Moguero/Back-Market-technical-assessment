@@ -13,7 +13,7 @@ I decided to handle this problem in two parts :
 
 ## Getting started
 
-Firstly, clone this GitHub repository on your machine. Navigate to the cloned repository and create the project environment from the given environment.yml file.
+Firstly, clone this GitHub repository on your machine. Navigate to the cloned repository and create the project environment from the given *environment.yml* file.
 For example, using the [Anaconda](https://docs.anaconda.com/anaconda/install/) package manager :
 
 ```
@@ -38,11 +38,11 @@ conda env remove -n back-market-case-study-lin
 
 Open the notebook in your IDE and choose the kernel associated to the Linux environment named *back-market-case-study-lin*.
 
-You can now execute the notebook cells. You will find in it an incorporated report where I explain everthing about my first approach of the problem.
+You can now execute the notebook. You will find in it an incorporated report where I explain everything about my first approach of the problem.
 
 ### CLI interface
 
-In order to execute the transformer Python program, navigate to the root of the GitHub repository type this CLI command :
+In order to execute the transformer Python program in your terminal, navigate to the root of the GitHub repository and type this CLI command :
 
 ```
 python transformer/transform.py "./resources/product_catalog.csv" "./valid_product_catalog.parquet" "./invalid_product_catalog.parquet"
