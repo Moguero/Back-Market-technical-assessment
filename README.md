@@ -9,7 +9,9 @@ The full wording can be found in this [GitHub repository](https://github.com/Bac
 I decided to handle this problem in two parts :
 
 - a first exploratory part where I was working with an interactive Jupyter notebook, which is more handy for plotting and fast experimenting
-- a second part focusing on the production code, where I designed a basic CLI interface
+- a second part focusing on the production code, where I wrote a proper Python script
+
+Now let's start 🚀
 
 ## Getting started
 
@@ -26,6 +28,10 @@ Then, activate the virtual environment. For example, with conda :
 conda activate back-market-case-study-lin
 ```
 
+*Warning* :  The conda environment was created on a **Linux** machine, the previous commands weren't tested on Windows nor MacOS.
+
+<br>
+
 *Note* : Once you're done with the project, don't forget to remove the environment by running :
 
 ```
@@ -36,17 +42,26 @@ conda env remove -n back-market-case-study-lin
 
 ### Notebook
 
-Open the notebook in your IDE and choose the kernel associated to the Linux environment named *back-market-case-study-lin*.
+First, run the following command in your terminal to add the conda environment in the Jupyter notebook :
+
+```
+ python -m ipykernel install --user --name=back-market-case-study-lin
+```
+
+Open the notebook in your IDE and choose the kernel associated to the environment named *back-market-case-study-lin*.
 
 You can now execute the notebook. You will find in it an incorporated report where I explain everything about my first approach of the problem.
 
+<br>
+
 ### CLI interface
 
-In order to execute the transformer Python program in your terminal, navigate to the root of the GitHub repository and type this CLI command :
+In order to execute the transformer Python program in a terminal, navigate to the root of the GitHub repository and type this CLI command :
 
 ```
 python transformer/transform.py ./resources/product_catalog.csv ./valid_product_catalog.parquet ./invalid_product_catalog.parquet
 ```
+<br>
 
 *Note* : the execution will fail if one of the output file paths already exists. To re-run the script, delete the old parquet files first.
 
