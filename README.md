@@ -45,7 +45,7 @@ You can now execute the notebook. You will find in it an incorporated report whe
 In order to execute the transformer Python program in your terminal, navigate to the root of the GitHub repository and type this CLI command :
 
 ```
-python transformer/transform.py "./resources/product_catalog.csv" "./valid_product_catalog.parquet" "./invalid_product_catalog.parquet"
+python transformer/transform.py ./resources/product_catalog.csv ./valid_product_catalog.parquet ./invalid_product_catalog.parquet
 ```
 
 *Note* : the execution will fail if one of the output file paths already exists. To re-run the script, delete the old parquet files first.
@@ -55,6 +55,9 @@ To get more help about the parser, type :
 ```
 python transformer/transform.py -h
 ```
+
+In particular, you can specify the library with which you'd like to handle the CSV, thanks to the "--library" optional argument : the value can be either pandas or dask.
+
 --- 
 
 I wish you a good reading 🙂
